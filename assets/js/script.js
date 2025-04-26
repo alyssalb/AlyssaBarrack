@@ -1,5 +1,9 @@
-
 const toggleBtn = document.getElementById('mode-toggle');
+
 toggleBtn.addEventListener('click', () => {
-  document.documentElement.toggleAttribute('data-theme', 'dark');
+  if (document.documentElement.getAttribute('data-theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 });

@@ -23,7 +23,9 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 
 header nav {
   display: flex;

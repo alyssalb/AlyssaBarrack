@@ -38,9 +38,9 @@ p {
 }
 
 p code {
-  background-color: #eee; /* may want to change? */
+  background-color: #F2F2F2;
   padding: 0.05em 0.2em;
-  border: 1px solid #ccc; /* may want to change to accent colors? */
+  border: 1px solid #ABBF63;
 }
 
 ol, ul {

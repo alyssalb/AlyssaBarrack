@@ -15,6 +15,30 @@ html {
   padding: 1.5em;
 }
 
+.topnav {
+  background-color: #3B3C40;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #ABBF63;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #3B3C40;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #3B3C40;
+  color: #EB9E3D;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 125%;
@@ -43,14 +67,10 @@ p code {
   border: 1px solid #ABBF63;
 }
 
-ol, ul {
-  margin: 1em;
-} 
-ol li ol, ol li ul, ul li ol, ul li ul {
-  margin: 0 2em;
-}
-ol li p, ul li p {
+ul {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 dl {

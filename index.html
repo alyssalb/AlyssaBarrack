@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Alyssa Barrack</title>
- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buttercake@4.0.0/dist/css/butterCake.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Barrack</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles specific to the About Me page */
+        .twine-game-container {
+            width: 100%;
+            height: 800px;
+            margin: 20px auto;
+        }
+        .about-me-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .about-me-content h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header>
-      <h1><a href="index.html">Alyssa Barrack</a></h1>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="theatre.html">Theatre</a></li>
-        <li><button id="mode-toggle">Toggle Mode</button></li>
-      </ul>
-  </header>
-  <body>
-      <h2>Welcome to My Site</h2>
-      <p>Placeholder Text. Here are all my things. Look at the sections to see what I do.</p>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/buttercake@4.0.0/dist/js/butterCake.min.js"></script>
+    <!-- 1. FIXED HAMBURGER MENU & SIDEBAR -->
+    <div class="hamburger-container" id="hamburger">
+        <span class="hamburger-icon"></span>
+    </div>
 
-  <footer>
+    <div class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#about">About</a>
+            <a href="#cv">CV</a>
+            <a href="#projects">Projects</a>
+            <a href="#theatre">Theatre</a>
+            <a href="#writing">Writing</a>
+        </nav>
+    </div>
+
+    <!-- Dark overlay to click outside the menu to close it -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 2. STICKY NAVIGATIONAL HEADER BAR -->
+    <header class="header">
+        <div class="header-name">MY NAME HERE</div>
+        <nav>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#cv">CV</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#theatre">Theatre</a></li>
+              <li><a href="#writing">Writing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 3. MAIN PAGE CONTENT -->
+    <main class="page-content-wrapper">
+        
+        <!-- Page Title (Top left in main content flow) -->
+        <h1 class="page-title">About</h1>
+
+        <!-- 4. THE CONTENT BOX (Dark background, Green header, Light body) -->
+        <section class="content-box">
+            <h2>About Me</h2>
+                <p>Alyssa Barrack is a Phd student in the Texts and Technology program at UCF and an enthusiastic theater artist and event manager. Alyssa also holds an MA in Interdisciplinary studies from UCF with a focus on audience studies in film, theatre, and video games, a BA in Theater Arts from USF, and a BA in Professional Writing, Rhetoric, and Technology from USF. They have a collection of variet personal, professional, and academic interests, and are friendly and open to conversation and collaboration.</p>
+            <h2>Contact Me</h2>
+                <p>Feel free to reach out to me via alyssa.barrack@ucf.edu or via <a href="https://www.linkedin.com/in/abarrack/">LinkedIn</a></p>
+            <h2>Explore My Interests</h2>
+                <p>Click through this interactive Twine experience to learn a little more about my research interests, theatrical philosophies, skills, and hobbies. </p>
+                    <iframe src="https://alyssalb.github.io/AboutMeGame/" frameborder="0" loading="lazy" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <!-- JavaScript for Hamburger Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('sidebar-open');
+                overlay.classList.toggle('overlay-visible');
+            }
+
+            // Toggle menu when hamburger icon is clicked
+            hamburger.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking the overlay (or links)
+            overlay.addEventListener('click', toggleMenu);
+            
+            // Optionally close the menu when a link inside the sidebar is clicked
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (sidebar.classList.contains('sidebar-open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
     <p>&copy; 2025 Alyssa Barrack</p>
   </footer>
 </body>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 16px; 
+    color: #3B3C40;
+    background-color: #F2F2F2;
+    cursor: crosshair, auto;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #12A1C7;
+}
+
+header {
+    background-color: #3B3C40;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    animation: fadeIn 2s ease-in;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: #EB9E3D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.17em;
+}
+
+nav a {
+    margin: 0 15px;
+    font-size: 1em;
+    color: #ABBF63;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+    animation: glow 1s infinite alternate;
+}
+
+button, .btn {
+    background-color: #EB9E3D
+    color: #3B3C40;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-bloack;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    animation: glow 2s infinite alternate;
+    transform: scale(1.05);
+}
+
+/* Glow Effect Animation */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #ABBF63;
+    }
+    to {
+        box-shadow: 0 0 20px #EB9E3D;
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+section {
+    padding: 60px 20px;
+}
+
+#intro {
+    background-size: cover;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.collapsible-button {
+    background-color: #3B3C40;
+    color: #12A1C7;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.collapsible-button:hover {
+    background-color: ABBF63;
+}
+
+.collapsible-button.active {
+    background-color: #3B3C40;
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+    padding: 0 18px;
+    background-color: #3B3C40;
+}
+
+.collapsible-content p {
+    margin: 15px 0;
+    color: #F2F2F2;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.reflection-image {
+    max-width: 60%;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #EB9E3D;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #3B3C40;
+    padding: 20px;
+    text-align: center;
+    color: #12a1c7;
+}
+    

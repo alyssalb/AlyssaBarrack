@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #12A1C7;
+    background-color: #F2F2F2;
 }
 
 header {
@@ -29,6 +29,7 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
     animation: fadeIn 2s ease-in;
+    color: #EB9E3D;
 }
 
 h2 {

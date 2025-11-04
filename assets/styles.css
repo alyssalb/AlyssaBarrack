@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: #f2f2f2;
+    background-color: #3b3c40;
     padding: 20px;
     text-align: center;
 }
@@ -99,7 +99,7 @@ section {
 
 #intro {
     background-size: cover;
-    color: #f2f2f2;
+    color: #3b3c40;
     text-align: center;
 }
 

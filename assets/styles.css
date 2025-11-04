@@ -4,8 +4,8 @@ body {
     margin: 0;
     font-family: 'Comic Neue', sans-serif;
     font-size: 16px; 
-    color: #3B3C40;
-    background-color: #F2F2F2;
+    color: #f2f2f2;
+    background-color: #3b3c40;
     cursor: crosshair, auto;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: #3b3c40;
+    background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
 }
@@ -60,7 +60,7 @@ nav a:hover {
 
 button, .btn {
     background-color: #EB9E3D
-    color: #3B3C40;
+    color: #f2f2f2;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

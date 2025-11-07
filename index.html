@@ -29,8 +29,8 @@
             <h2>Contact Me</h2>
                 <p>Feel free to reach out to me via alyssa.barrack@ucf.edu or via <a href="https://www.linkedin.com/in/abarrack/">LinkedIn</a></p>
             <h2>Explore My Interests</h2>
-                <p>Click through this interactive Twine experience to learn a little more about my research interests, theatrical philosophies, skills, and hobbies. </p>
-                    <iframe src="https://alyssalb.github.io/AboutMeGame/" frameborder="0" height="700%" width="100%" loading="lazy" allowfullscreen="true"></iframe>
+                <p>Click through this interactive Twine experience to learn a little more about my research interests, theatrical philosophies, skills, and hobbies. <button id="fullscreenButton">Go Fullscreen</button></p>
+                    <iframe id="myIframe" src="https://alyssalb.github.io/AboutMeGame/" frameborder="0" height="700%" width="100%" loading="lazy" allowfullscreen="true"></iframe>
         </section>
 
         <section id="cv">
@@ -274,7 +274,19 @@
             }
         },
         "retina_detect": true
-    });                  
+    });  
+    const iframe = document.getElementById('myIframe');
+    const fullscreenButton = document.getElementById('fullscreenButton');
+
+    fullscreenButton.addEventListener('click', () =< {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { /* safari */
+            iframe.webkitRequestFullscreen();
+        }    else if (iframe.msRequestFullscreen) { 
+        iframe.msRequestFullscreen();
+        }
+    });
 </script>
 </body>
 </html>

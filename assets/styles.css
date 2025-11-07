@@ -155,4 +155,18 @@ footer {
     text-align: center;
     color: #12a1c7;
 }
-    
+
+.project-embed-container {
+    min-height: 200px;
+}
+
+.project-embed-container iframe {
+    height: 700px !important;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* rounded corner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 0; 
+}

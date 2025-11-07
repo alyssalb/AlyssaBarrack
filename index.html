@@ -382,40 +382,67 @@ src="https://alyssalb.github.io/AboutMeGame/" frameborder="0" height="700%" widt
     });                  
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="..." crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="..." crossorigin="anonymous"></script>
 
-document.querySelectorAll('.collapse').forEach(collapseElement => {
+<!-- START: Dynamic Loader Script -->
+<script>
+// This script uses jQuery syntax to correctly detect Bootstrap events 
+// and lazy-load the iframes.
 
-collapseElement.addEventListener('shown.bs.collapse', function () {
-      
-const container = this.querySelector('.project-embed-container');
-      if (container && !container.getAttribute('data-loaded')) {
-        const url = container.getAttribute('data-project-url');
-
-        const iframe = document.createElement('iframe');
-        iframe.src = url;
-        iframe.width = "100%";
-        iframe.height = "700"; // height (700px)
-        iframe.setAttribute('frameborder', '0');
-        iframe.setAttribute('allowfullscreen', 'true'); // Enable fullscreen
-        
-        container.innerHTML = ''; 
-        container.appendChild(iframe);
-
-        container.setAttribute('data-loaded', 'true'); 
-      }
-    });
+$(document).ready(function() {
     
-    collapseElement.addEventListener('hidden.bs.collapse', function () {
-      const container = this.querySelector('.project-embed-container');
+    // Select all elements that have the 'collapse' class (your project dropdowns)
+    $('.collapse').on('shown.bs.collapse', function () {
+        
+        console.log('Bootstrap Collapse Event Fired. Checking container...');
+        
+        // Find the specific container inside the currently opened collapse panel
+        const container = $(this).find('.project-embed-container')[0]; 
+        
+        if (container && !$(container).data('loaded')) {
+            const url = $(container).data('project-url');
+            
+            console.log('Attempting to load project from URL:', url); 
+            
+            // Check for placeholder URL
+            if (!url || url.includes('[INSERT ACTUAL')) {
+                 console.error('ERROR: Placeholder URL detected or URL is missing. Cannot load iframe.');
+                 $(container).html('<div class="p-4 text-center text-danger">ERROR: Please replace the placeholder URL in index.html to load this project.</div>');
+                 return;
+            }
 
-      if (container && container.getAttribute('data-loaded')) {
-        container.innerHTML = '<div class="p-4 text-center text-muted">Loading placeholder... Click the heading above to load the interactive project.</div>';
-        container.removeAttribute('data-loaded');
-      }
+            // Create the iframe element
+            const iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.width = "100%";
+            iframe.height = "700"; 
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allowfullscreen', 'true'); 
+            
+            // Insert the iframe
+            $(container).empty(); // Clear the initial placeholder text
+            container.appendChild(iframe);
+            
+            // Mark as loaded
+            $(container).data('loaded', true); 
+        } else {
+            console.log('Container not found or already loaded. Skipping load.');
+        }
     });
-  });
-});
+
+    // --- Optional: Clear Iframe when the dropdown CLOSES (For performance) ---
+    $('.collapse').on('hidden.bs.collapse', function () {
+        const container = $(this).find('.project-embed-container')[0]; 
+        
+        if (container && $(container).data('loaded')) {
+            console.log('Project hidden. Removing iframe.');
+            // Reset to the initial placeholder state
+            $(container).html('<div class="p-4 text-center text-muted">Loading placeholder... Click the heading above to load the interactive project.</div>');
+            $(container).data('loaded', false);
+        }
+    });
+}); 
 </script>
 </body>
 </html>

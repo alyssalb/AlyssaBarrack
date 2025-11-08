@@ -126,7 +126,7 @@ section {
 
 .collapsible-content {
     display: none;
-    overflow: auto;
+    overflow: visible;
     padding: 0 18px;
     background-color: #3B3C40;
 }

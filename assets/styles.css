@@ -179,3 +179,31 @@ footer {
     width: 100%;
     height: 100%;
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: #EB9E3D;
+    color: #f2f2f2;
+    border: none;
+    border-radius: 50%;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#scrollToTopBtn:hover {
+    animation: glow 1s infinite alternate;
+    transform: scale(1.1);
+}

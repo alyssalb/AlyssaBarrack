@@ -58,6 +58,12 @@ nav a:hover {
     animation: glow 1s infinite alternate;
 }
 
+img {
+    border-radius: 30%;
+    max-width: 40%;
+    height: auto;
+}
+
 button, .btn {
     background-color: #EB9E3D
     color: #f2f2f2;

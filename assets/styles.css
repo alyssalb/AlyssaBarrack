@@ -64,6 +64,13 @@ img {
     height: auto;
 }
 
+#theatre ul li img {
+    display: block;
+    margin-top: 5px; 
+    margin-left: 0;   
+    margin-right: auto; 
+}
+
 button, .btn {
     background-color: #EB9E3D
     color: #f2f2f2;

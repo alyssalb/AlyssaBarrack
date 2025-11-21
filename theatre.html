@@ -20,14 +20,87 @@
         </nav>
     </header>
 
-        <section id="#theatre">
-            <h2>Selected Production History</h2>
-            <div class="collapsible">
-                <button class="collapsible-button">Production History Timeline</button>
-                    <div class="collapsible-content">
+    <section id="theatre" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Selected Production History</h2>
+            <p class="lead text-center text-muted mb-5">Click on the title nodes below to expand and view production details and roles.</p>
+
+            <div class="timeline-container">
+                <div class="accordion" id="productionTimeline">
+                    
+                    <!-- TIMELINE ITEM 1 -->
+                    <div class="card timeline-card">
+                        <div class="card-header timeline-header" id="productionHeading1">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link w-100 text-left collapsed timeline-title" type="button" data-toggle="collapse" data-target="#productionCollapse1" aria-expanded="false" aria-controls="productionCollapse1">
+                                    <span class="timeline-year">[YEAR 1]</span>
+                                    <span class="timeline-role">[ROLE 1] - [SHOW NAME 1]</span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="productionCollapse1" class="collapse" aria-labelledby="productionHeading1" data-parent="#productionTimeline">
+                            <div class="card-body timeline-body">
+                                <h6>Production Details:</h6>
+                                <ul>
+                                    <li><strong>Show:</strong> [Show Name 1]</li>
+                                    <li><strong>Venue:</strong> [Venue Name]</li>
+                                    <li><strong>Role:</strong> [Your Specific Role]</li>
+                                    <li><strong>Notes:</strong> Detailed description of your responsibilities or achievements for this production. E.g., "Responsible for complex cueing and design integration."</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- TIMELINE ITEM 2 -->
+                    <div class="card timeline-card">
+                        <div class="card-header timeline-header" id="productionHeading2">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link w-100 text-left collapsed timeline-title" type="button" data-toggle="collapse" data-target="#productionCollapse2" aria-expanded="false" aria-controls="productionCollapse2">
+                                    <span class="timeline-year">[YEAR 2]</span>
+                                    <span class="timeline-role">[ROLE 2] - [SHOW NAME 2]</span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="productionCollapse2" class="collapse" aria-labelledby="productionHeading2" data-parent="#productionTimeline">
+                            <div class="card-body timeline-body">
+                                <h6>Production Details:</h6>
+                                <ul>
+                                    <li><strong>Show:</strong> [Show Name 2]</li>
+                                    <li><strong>Venue:</strong> [Venue Name]</li>
+                                    <li><strong>Role:</strong> [Your Specific Role]</li>
+                                    <li><strong>Notes:</strong> Detailed description of your responsibilities or achievements for this production.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE ITEM 3 (Add more as needed) -->
+                    <div class="card timeline-card">
+                        <div class="card-header timeline-header" id="productionHeading3">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link w-100 text-left collapsed timeline-title" type="button" data-toggle="collapse" data-target="#productionCollapse3" aria-expanded="false" aria-controls="productionCollapse3">
+                                    <span class="timeline-year">[YEAR 3]</span>
+                                    <span class="timeline-role">[ROLE 3] - [SHOW NAME 3]</span>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="productionCollapse3" class="collapse" aria-labelledby="productionHeading3" data-parent="#productionTimeline">
+                            <div class="card-body timeline-body">
+                                <h6>Production Details:</h6>
+                                <ul>
+                                    <li><strong>Show:</strong> [Show Name 3]</li>
+                                    <li><strong>Venue:</strong> [Venue Name]</li>
+                                    <li><strong>Role:</strong> [Your Specific Role]</li>
+                                    <li><strong>Notes:</strong> Detailed description of your responsibilities or achievements for this production.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-         </section>
+        </div>
+    </section>
 
   </main>
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alyssa Barrack Portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Alyssa Barrack</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cv1.html">CV</a>
+            <a href="projects.html">Projects</a>
+            <a href="theatre.html">Theatre</a>
+            <a href="writing.html">Writing</a>
+        </nav>
+    </header>
+
+        <section id="#theatre">
+            <h2>Selected Production History</h2>
+            <div class="collapsible">
+                <button class="collapsible-button">Production History Timeline</button>
+                    <div class="collapsible-content">
+                    </div>
+            </div>
+         </section>
+
+  </main>
+
+    <footer>Alyssa Barrack 2025</footer>
+
+<script src="assets/script.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 100, //adjust for number of stars :) 
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": ["#FFFFFF", "#FFD700", "#EB9E3D", "#12A1C7", "#ABBF63"] //star colors
+            },
+            "shape": {
+                "type": "circle"
+            },
+            "opacity": {
+                "value": 0.8,
+                "random": true
+            },
+            "size": {
+                "value": 2,
+                "random": true
+            },
+            "line_linked": {
+                "enable": false
+            },
+            "move": {
+                "enable": true,
+                "speed": 0.5, //star movement
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false
+            }
+        },
+        "retina_detect": true
+    });  
+    const iframe = document.getElementById('myIframe');
+    const fullscreenButton = document.getElementById('fullscreenButton');
+
+    fullscreenButton.addEventListener('click', () =< {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { /* safari */
+            iframe.webkitRequestFullscreen();
+        }    else if (iframe.msRequestFullscreen) { 
+        iframe.msRequestFullscreen();
+        }
+    });
+
+    const scrollToTopBtn =
+        document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >300) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        });
+
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+    <button id="scrollToTopBtn" title="Go to top"></button>
+</body>
+</html>

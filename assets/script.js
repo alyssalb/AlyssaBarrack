@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- 1. Collapsible Buttons Logic ---
     var coll = document.getElementsByClassName('collapsible-button');
     var i;
 
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
 
             var content = this.nextElementSibling;
-            // Best practice: use class toggling for visibility instead of inline style.display
             if (content.style.display === 'block') {
                 content.style.display = 'none';
             } else {
@@ -16,9 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // --- 2. Particles.js Initialization (Now runs safely) ---
-    // Ensure the <div id="particles-js"></div> is in your HTML
+    
     particlesJS("particles-js", {
         "particles": {
             "number": {
@@ -29,18 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             "color": {
-                // Your colorful array is correct
                 "value": ["#FFFFFF", "#FFD700", "#EB9E3D", "#12A1C7", "#ABBF63"] 
             },
             "shape": {
                 "type": "circle"
             },
             "opacity": {
-                "value": 0.8,
-                "random": true
+                "value": 0.5, // more opaque or less opaque
+                "random": true,
+                "anim": { 
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
             },
             "size": {
-                "value": 2,
+                "value": 7, // bubble size
                 "random": true
             },
             "line_linked": {
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             "move": {
                 "enable": true,
-                "speed": 0.5,
+                "speed": 0.2, // bubble speed
                 "direction": "none",
                 "random": true,
                 "straight": false,

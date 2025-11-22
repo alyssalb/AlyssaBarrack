@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             "size": {
-                "value": 7, // bubble size
+                "value": 9, // bubble size
                 "random": true
             },
             "line_linked": {
